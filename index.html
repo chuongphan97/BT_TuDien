@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển Anh - Việt</title>
+</head>
+<body>
+    <h2>Từ điển Anh - Việt</h2>
+    <label for="eng">Anh: <input type="text" name="" id="eng"></label>
+    <br><br>
+    <label for="vi">Việt: <input type="text" name="" id="vi"></label>
+    <input type="button" name="" id="trans" value="Dịch" onclick="doTrans()">
+
+
+    <script>
+        function doTrans(){
+            
+        let viet =["Xin chào", "Tạm biệt","Hẹn gặp lại"];
+        let anh = ["Hello", "Bye", "See you again"];
+        
+        let eng = document.getElementById("eng").value;
+        if (eng != ""){
+        document.getElementById('vi').value = viet[anh.indexOf(eng)];
+        } else alert('Vui lòng nhập tiếng Anh cần dịch!');
+    }
+        
+    </script>
+
+</body>
+</html>
